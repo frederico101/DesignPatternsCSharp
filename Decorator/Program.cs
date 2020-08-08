@@ -16,7 +16,7 @@ namespace Design
             Console.Write(palmito.PizzaPequena());
             Console.WriteLine( cheese.PizzaMedia());
             Console.WriteLine(pizzaMedia.PizzaMedia());
-            Console.WriteLine(ComBordas.PizzaMedia());  // como vou saber se é com bordas ou sem ????
+            Console.WriteLine(ComBordas.PizzaMedia()); //como vou saber se é com bordas ou sem :( ????
         }
     }
     // base interface 
@@ -30,31 +30,24 @@ namespace Design
     class Pizza : Ipizza
     {
         public string PizzaPequena()
-        {
-            return "Pizza pequena\n";
-        }
-
+         => "Pizza pequena\n";
+        
         public string PizzaMedia()
-        {
-            return "Pizza media\n";
-        }
+         => "Pizza media\n";        
     }
     //base decorator class
     class PizzaDecorator : Ipizza
     {
         private Ipizza _pizza;
         public PizzaDecorator(Ipizza pizza)
-        {
-            _pizza = pizza;
-        }
+         => _pizza = pizza;
+        
         public virtual string PizzaPequena()
-        {
-           return _pizza.PizzaPequena();
-        }
+         => _pizza.PizzaPequena();
+        
         public virtual string PizzaMedia()
-        {
-             return _pizza.PizzaMedia();
-        }
+         => _pizza.PizzaMedia();
+        
 
     }
     //derived decorator class 
