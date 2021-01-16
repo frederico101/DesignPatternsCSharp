@@ -2,14 +2,6 @@
 
 namespace Padaria
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            IPao manteiga = new ManteigaDecorator(new Pao());
-            Console.WriteLine(manteiga.PaoFrances());
-        }
-    }
 
     interface IPao
     {
